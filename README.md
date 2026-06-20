@@ -112,10 +112,10 @@ Final decisions always remain with the user.
 
 ## Live Demo
 
-Add your deployment link here
+https://alaya-nine.vercel.app?_vercel_share=uHIcUqH3vc77oOz1POPFM5rBQJkoV52H
 
 ```text
-https://your-demo-link.com
+https://alaya-nine.vercel.app?_vercel_share=uHIcUqH3vc77oOz1POPFM5rBQJkoV52H
 ```
 
 ## Demo Video
