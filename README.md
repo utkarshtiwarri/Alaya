@@ -114,10 +114,6 @@ Final decisions always remain with the user.
 
 https://alaya-nine.vercel.app?_vercel_share=uHIcUqH3vc77oOz1POPFM5rBQJkoV52H
 
-```text
-https://alaya-nine.vercel.app?_vercel_share=uHIcUqH3vc77oOz1POPFM5rBQJkoV52H
-```
-
 ## Demo Video
 
 Add your YouTube video link here
