@@ -118,9 +118,13 @@ Add your deployment link here
 https://alaya-nine.vercel.app?_vercel_share=uHIcUqH3vc77oOz1POPFM5rBQJkoV52H
 ```
 
+The application includes a fallback demo mode for evaluation when external AI services are unavailable.
+
 ## Demo Video
 
 Add your YouTube video link here
+
+Demo video recorded from localhost, showing the complete Gemini-powered workflow and the real AI flow.
 
 ```text
 https://youtube.com/your-video
