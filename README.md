@@ -1,69 +1,373 @@
-# ALAYA — Decision Thinking Assistant
+# 🧠 ALAYA
 
-This repository contains a local-first web app that helps users clarify hard decisions by mapping values, surfacing biases, and generating a short validation action plan.
+## Your AI Thinking Partner for Life's Biggest Decisions
 
-## Overview
-- Frontend: React + TypeScript (in `src/`) with small UI components for Values DNA, Tradeoffs, Bias detection, and Action Protocols.
-- Backend: Express server (`server.ts`) that invokes an AI backend to generate follow-up questions and synthesize a structured decision report.
+Alaya is an AI-powered Decision Intelligence System designed to help people navigate uncertainty, overcome decision paralysis, and take meaningful action.
 
-> The app requires an API key for the configured AI provider. You can develop and test with a mock or local stub if you don't want to use a live key during development.
+Instead of telling users what to choose, Alaya helps them understand **why they are stuck**, identify hidden blockers, evaluate tradeoffs, and move from confusion to clarity.
 
-## Run Locally
+---
 
-**Prerequisites:** Node.js (LTS)
+# 🚀 Problem
 
-1. Install dependencies:
+People face important decisions every day:
 
-```powershell
-cd C:\Users\Utkarsh\Downloads\alaya
+* Higher Studies vs Employment
+* Entrepreneurship vs Stability
+* Career Changes
+* Relocation Decisions
+* Skill Development Paths
+* Personal Growth Opportunities
+
+While information is abundant, clarity is not.
+
+People often struggle with:
+
+* Information overload
+* Conflicting advice
+* Hidden fears and biases
+* Uncertainty about outcomes
+* Analysis paralysis
+
+The problem is not a lack of information.
+
+**The problem is a lack of clarity.**
+
+---
+
+# 💡 Solution
+
+Alaya transforms decision-making into a structured reasoning process.
+
+Users describe their dilemma in natural language, and Alaya helps them:
+
+* Understand their priorities
+* Identify hidden concerns
+* Explore tradeoffs
+* Surface potential biases
+* Generate actionable next steps
+
+The goal is not to replace human judgment.
+
+The goal is to strengthen it.
+
+---
+
+# ✨ Core Features
+
+## Decision DNA Analysis
+
+Analyze:
+
+* Core Values
+* Priorities
+* Constraints
+* Decision Style
+
+---
+
+## Tradeoff Mapping
+
+Compare options across:
+
+* Risk
+* Growth
+* Stability
+* Learning
+* Opportunity Cost
+
+---
+
+## Hidden Blocker Detection
+
+Surface possible blockers such as:
+
+* Fear of Failure
+* Analysis Paralysis
+* Social Pressure
+* Perfectionism
+* Fear of Missing Out
+
+---
+
+## Action Protocol Generator
+
+Generate structured plans such as:
+
+* 7-Day Action Plan
+* 14-Day Validation Plan
+* 30-Day Exploration Plan
+
+---
+
+## Human-in-the-Loop Design
+
+Alaya provides insights and recommendations.
+
+Final decisions always remain with the user.
+
+---
+
+# 🎥 Demo
+
+## Live Demo
+
+Add your deployment link here
+
+```text
+https://your-demo-link.com
+```
+
+## Demo Video
+
+Add your YouTube video link here
+
+```text
+https://youtube.com/your-video
+```
+
+## Presentation
+
+Add your PPT link here
+
+https://drive.google.com/file/d/115_ZLM7jIf2W-4TsolkDDek2t-WZ9trs/view?usp=sharingf
+```
+
+---
+
+# 🖼️ Screenshots
+
+## Landing Page
+![alt text](image.png)
+
+## Decision Analysis
+
+![alt text](image-1.png)
+
+## Decision DNA Report
+
+![alt text](image-2.png)
+
+## Action Protocol
+
+![alt text](image-3.png)
+
+---
+
+# 🧭 How to Use
+
+### Step 1
+
+Open Alaya in your browser.
+
+### Step 2
+
+Describe your dilemma.
+
+Example:
+
+> I am confused between pursuing higher studies, accepting a job offer, or starting my own business.
+
+### Step 3
+
+Answer the AI-generated follow-up questions.
+
+### Step 4
+
+Review your Decision DNA Report.
+
+### Step 5
+
+Understand your values, tradeoffs, and hidden blockers.
+
+### Step 6
+
+Follow the recommended action protocol.
+
+### Step 7
+
+Make a more informed and confident decision.
+
+---
+
+# 🏗️ Architecture
+
+```text
+User Dilemma
+      ↓
+Natural Language Processing
+      ↓
+Value Extraction
+      ↓
+Tradeoff Analysis
+      ↓
+Bias Detection
+      ↓
+Decision Intelligence Engine
+      ↓
+Decision Report
+      ↓
+Action Protocol
+```
+
+---
+
+# 🛡️ Responsible AI
+
+Responsible AI is a core design principle of Alaya.
+
+## Potential Risk
+
+Users may over-rely on AI-generated insights.
+
+## Mitigation Strategies
+
+* Confidence Indicators
+* Transparent Reasoning
+* Multiple Perspectives
+* Alternative Interpretations
+* Human-in-the-Loop Oversight
+
+## Important
+
+Alaya does not make decisions on behalf of users.
+
+The final decision always remains under human control.
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+* React
+* TypeScript
+
+## Backend
+
+* Express.js
+* Node.js
+
+## AI
+
+* Google Gemini API
+
+---
+
+# 📂 Project Structure
+
+```text
+alaya/
+├── src/
+│   ├── components/
+│   ├── App.tsx
+│   └── ...
+├── server.ts
+├── package.json
+└── README.md
+```
+
+---
+
+# ⚙️ Run Locally
+
+## Prerequisites
+
+* Node.js (LTS)
+
+### Install Dependencies
+
+```bash
 npm install
 ```
 
-2. Configure environment variables (create a `.env` or `.env.local`):
+### Configure Environment Variables
 
-```
-# Example env file
+Create a `.env` file:
+
+```env
 GEMINI_API_KEY=your_api_key_here
 NODE_ENV=development
 ```
 
-3. Start development server (backend + Vite middleware):
+### Start Development Server
 
-```powershell
+```bash
 npm run dev
 ```
 
-Open http://localhost:3000 in your browser.
+Open:
 
-## Type checking & build
-
-```powershell
-npm run lint    # type check (tsc --noEmit)
-npm run build   # production build
-npm start       # run built server
+```text
+http://localhost:3000
 ```
 
-## Notes
-- If you prefer not to use a live AI key while developing, consider implementing a small mock that returns example questions/reports for the API endpoints in `server.ts`.
-- The main files to review are `server.ts` (API and AI prompts) and `src/App.tsx` (user flow and rendering).
+---
 
-If you want, I can also add a simple mock mode and update `README.md` with instructions for the hackathon submission.
+# 🧪 Mock / Demo Mode
 
-## Mock / Demo Mode (no AI key required)
+Run Alaya without a live AI key.
 
-To run the app without a live AI key (handy for local demos or hackathon submissions), enable mock mode.
+Create or update your `.env` file:
 
-1. Create or update your `.env` file in the project root and add:
-
-```
+```env
 MOCK_MODE=true
-# GEMINI_API_KEY can be left empty when MOCK_MODE=true
 ```
 
-2. Start the dev server:
+Then start:
 
-```powershell
+```bash
 npm run dev
 ```
 
-When `MOCK_MODE` is enabled the backend returns deterministic example questions and a sample report so you can demonstrate the full UI without network calls to an external AI provider.
+When Mock Mode is enabled, Alaya returns deterministic example questions and reports, making it perfect for demos and testing.
+
+---
+
+# 🔍 Example Use Cases
+
+### Education
+
+* Choosing a degree path
+* Studying abroad
+* Exam preparation decisions
+
+### Career
+
+* Job switching
+* Offer evaluation
+* Career planning
+
+### Entrepreneurship
+
+* Startup validation
+* Business opportunity analysis
+* Growth decisions
+
+### Personal Life
+
+* Relocation choices
+* Goal prioritization
+* Long-term planning
+
+---
+
+# 🌟 Vision
+
+We envision Alaya becoming a lifelong Decision Intelligence Companion that helps people make better decisions, navigate uncertainty, and develop stronger decision-making skills over time.
+
+---
+
+# 📌 Tagline
+
+### Confusion → Clarity → Action
+
+### Alaya — Your AI Thinking Partner for Life's Biggest Decisions.
+
+---
+
+# 👨‍💻 Team
+
+**Steel Brains**
+
+Built for the **Build the Second Brain for Real Life** Hackathon.
