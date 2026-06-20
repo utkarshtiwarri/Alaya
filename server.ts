@@ -10,8 +10,15 @@ dotenv.config();
 const app = express();
 const PORT = 3000;
 
+app.use(
+  cors({
+    origin: [
+      "https://alaya-nine.vercel.app",
+      "http://localhost:3000",
+    ],
+  })
+);
 app.use(express.json());
-app.use(cors());
 
 // Lazy-loaded Gemini AI client utility to prevent crashes if the API key is not yet set
 let aiClient: GoogleGenAI | null = null;
