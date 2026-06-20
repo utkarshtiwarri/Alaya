@@ -95,6 +95,15 @@ export default function App() {
     setPage("analyze");
   };
 
+  const parseApiResponse = async (res: Response) => {
+    const contentType = res.headers.get("content-type") || "";
+    if (contentType.includes("application/json")) {
+      return res.json();
+    }
+    const text = await res.text();
+    return { error: text || "Unexpected response format from server" };
+  };
+
   // 1. Generate questions
   const fetchQuestions = async () => {
     if (!dilemma.trim()) return;
@@ -108,13 +117,16 @@ export default function App() {
         body: JSON.stringify({ dilemma }),
       });
 
+      const data = await parseApiResponse(res);
       if (!res.ok) {
-        const errData = await res.json();
-        throw new Error(errData.error || "Failed to generate personalized questions");
+        throw new Error(data?.error || "Failed to generate personalized questions");
       }
 
-      const data = await res.json();
-      setQuestions(data.questions || []);
+      if (!data || !Array.isArray(data.questions)) {
+        throw new Error("Invalid response from the server while generating questions.");
+      }
+
+      setQuestions(data.questions);
       setCurrentQuestionIdx(0);
       setAnswers({});
       setCustomAnswer("");
@@ -156,20 +168,19 @@ export default function App() {
         body: JSON.stringify({ dilemma, answers: finalAnswers }),
       });
 
+      const data = await parseApiResponse(res);
       if (!res.ok) {
-        const errData = await res.json();
-        throw new Error(errData.error || "Failed to run decision synthesis");
+        throw new Error(data?.error || "Failed to run decision synthesis");
       }
 
-      const data = await res.json();
-      if (data.report) {
-        setReport(data.report);
-        localStorage.setItem("alaya_current_report", JSON.stringify(data.report));
-        localStorage.setItem("alaya_current_dilemma", dilemma);
-        setPage("results");
-      } else {
-        throw new Error("Invalid output received from the engine");
+      if (!data || !data.report) {
+        throw new Error("Invalid response received from the engine.");
       }
+
+      setReport(data.report);
+      localStorage.setItem("alaya_current_report", JSON.stringify(data.report));
+      localStorage.setItem("alaya_current_dilemma", dilemma);
+      setPage("results");
     } catch (error: unknown) {
       const message = error instanceof Error ? error.message : String(error);
       setError(message || "Failed during report synthesis");

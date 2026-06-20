@@ -291,17 +291,43 @@ GEMINI_API_KEY=your_api_key_here
 NODE_ENV=development
 ```
 
+### Full Functional Demo
+
+To run Alaya fully without a live Gemini key, enable mock/demo mode:
+
+```env
+MOCK_MODE=true
+```
+
+This will make the app return deterministic sample questions and reports so the UI works end-to-end.
+
 ### Start Development Server
 
 ```bash
 npm run dev
 ```
 
+If PowerShell is blocked by execution policy, use Windows CMD instead:
+
+```cmd
+cmd.exe /c "npm install && npm run dev"
+```
+
+> Note: PowerShell may refuse execution for scripts if the system policy is restricted. Using `cmd.exe` avoids that restriction for local npm commands.
+
 Open:
 
 ```text
 http://localhost:3000
 ```
+
+### What to expect
+
+1. A clean landing page with the Alaya decision prompt.
+2. Enter your dilemma and click to start the thinking session.
+3. Answer the AI-generated follow-up questions one by one.
+4. Receive a Decision DNA report, bias analysis, tradeoff map, and action protocol.
+5. Export your report or restart the session at any time.
 
 ---
 

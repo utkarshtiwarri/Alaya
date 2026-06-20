@@ -179,7 +179,14 @@ Respond strictly with a JSON array matches this schema:
       throw new Error("No text response returned from Gemini.");
     }
 
-    const questions = JSON.parse(text.trim());
+    let questions;
+    try {
+      questions = JSON.parse(text.trim());
+    } catch (parseError) {
+      console.error("Gemini JSON parse failed for questions response:", text, parseError);
+      throw new Error("Invalid AI response format while generating questions.");
+    }
+
     return res.json({ questions });
   } catch (err: any) {
     console.error("Error generating questions:", err);
@@ -199,6 +206,11 @@ app.post("/api/generate-report", async (req, res) => {
   }
 
   try {
+    if (MOCK_MODE) {
+      const report = generateMockReport(dilemma, answers);
+      return res.json({ report });
+    }
+
     const ai = getGeminiClient();
 
     // Map the answers into a string format for prompt context
@@ -416,7 +428,14 @@ Validate that your response is valid JSON fitting the requested structure.
       throw new Error("No text response returned from Gemini.");
     }
 
-    const report = JSON.parse(text.trim());
+    let report;
+    try {
+      report = JSON.parse(text.trim());
+    } catch (parseError) {
+      console.error("Gemini JSON parse failed for report response:", text, parseError);
+      throw new Error("Invalid AI response format while generating the report.");
+    }
+
     return res.json({ report });
   } catch (err: any) {
     console.error("Error generating report:", err);
