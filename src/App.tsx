@@ -58,6 +58,85 @@ const DEMONSTRATION_DILEMMAS = [
   },
 ];
 
+const localMockQuestions = (dilemma: string): FollowUpQuestion[] => [
+  {
+    id: "q1",
+    question: `Which outcome matters more to you in this dilemma: growth, stability, or learning?`,
+    category: "values",
+    suggestedOptions: ["Growth", "Stability", "Learning", "Not sure / custom"],
+  },
+  {
+    id: "q2",
+    question: `What is your biggest unspoken fear about this choice?`,
+    category: "fears",
+    suggestedOptions: ["Failing", "Letting people down", "Missing opportunities", "Other / custom"],
+  },
+  {
+    id: "q3",
+    question: `Which constraint matters most right now? (time, money, location)`,
+    category: "context",
+    suggestedOptions: ["Time", "Money", "Location", "Other / custom"],
+  },
+];
+
+const localMockReport = (dilemma: string, answers: SurveyAnswers): AlayaReport => ({
+  coreValues: [
+    { value: "Growth", explanation: "You value continuous learning and challenge.", importance: 9 },
+    { value: "Security", explanation: "You care about stable income and predictability.", importance: 7 },
+  ],
+  decisionStyle: { style: "Analytical Dreamer", description: "Balances data with long-term vision." },
+  hiddenBlockers: [
+    { blocker: "Fear of failure", description: "Worries about disappointing others.", intensity: 6 },
+  ],
+  optionsCompared: [
+    {
+      optionName: "Option A",
+      criteria: { risk: 6, growth: 9, income: 5, learning: 9, flexibility: 6 },
+      pros: ["High learning", "Exciting"],
+      cons: ["Uncertain income", "Long hours"],
+    },
+    {
+      optionName: "Option B",
+      criteria: { risk: 3, growth: 5, income: 8, learning: 4, flexibility: 7 },
+      pros: ["Stable income", "Predictable schedule"],
+      cons: ["Less rapid growth", "Less creative control"],
+    },
+  ],
+  biasAnalysis: [
+    { biasType: "Loss Aversion", matchesUser: true, intensity: 6, explanation: "Overweights potential losses compared to gains." },
+  ],
+  futureScenarios: [
+    {
+      optionName: "Option A",
+      oneYearOutcome: {
+        description: "Steep learning curve with project wins.",
+        advantages: ["Skills growth"],
+        challenges: ["Burnout risk"],
+        risks: ["Income drops"],
+      },
+    },
+    {
+      optionName: "Option B",
+      oneYearOutcome: {
+        description: "Consistent progress and stable earnings.",
+        advantages: ["Financial stability"],
+        challenges: ["Slower growth"],
+        risks: ["Regret over missed opportunities"],
+      },
+    },
+  ],
+  suggestedActionPath: {
+    summary: "Run a two-week validation experiment focusing on high-impact tests.",
+    actionProtocol: { days7: ["List measurable outcomes", "Speak to one mentor"], days14: ["Run short trial", "Measure metrics"], days30: ["Review results", "Decide next step"] },
+    validationExperiment: { objective: "Test option viability", timeline: "14 days", keyMetrics: ["Time spent", "Progress made"], steps: ["Prototype", "User feedback"] },
+  },
+  confidenceLevel: 72,
+});
+
+const shouldUseLocalMock = (message: string) => {
+  return /page could not be found|not found|unexpected response format|networkerror|failed to generate|not_found/i.test(message);
+};
+
 export default function App() {
   const [page, setPage] = useState<"landing" | "analyze" | "results" | "about">("landing");
   
@@ -132,7 +211,16 @@ export default function App() {
       setCustomAnswer("");
     } catch (error: unknown) {
       const message = error instanceof Error ? error.message : String(error);
-      setError(message || "Something went wrong. Let's try again.");
+      if (shouldUseLocalMock(message)) {
+        const fallbackQuestions = localMockQuestions(dilemma);
+        setQuestions(fallbackQuestions);
+        setCurrentQuestionIdx(0);
+        setAnswers({});
+        setCustomAnswer("");
+        setError("The API was unavailable, so Alaya is running in local demo mode.");
+      } else {
+        setError(message || "Something went wrong. Let's try again.");
+      }
     } finally {
       setLoadingQuestions(false);
     }
@@ -183,7 +271,16 @@ export default function App() {
       setPage("results");
     } catch (error: unknown) {
       const message = error instanceof Error ? error.message : String(error);
-      setError(message || "Failed during report synthesis");
+      if (shouldUseLocalMock(message)) {
+        const fallbackReport = localMockReport(dilemma, finalAnswers);
+        setReport(fallbackReport);
+        localStorage.setItem("alaya_current_report", JSON.stringify(fallbackReport));
+        localStorage.setItem("alaya_current_dilemma", dilemma);
+        setPage("results");
+        setError("The API was unavailable, so Alaya is running in local demo mode.");
+      } else {
+        setError(message || "Failed during report synthesis");
+      }
     } finally {
       setGeneratingReport(false);
     }
