@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import path from "path";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, Type } from "@google/genai";
@@ -10,6 +11,7 @@ const app = express();
 const PORT = 3000;
 
 app.use(express.json());
+app.use(cors());
 
 // Lazy-loaded Gemini AI client utility to prevent crashes if the API key is not yet set
 let aiClient: GoogleGenAI | null = null;

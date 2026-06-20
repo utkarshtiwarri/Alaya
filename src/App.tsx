@@ -190,7 +190,7 @@ export default function App() {
     setError(null);
 
     try {
-      const res = await fetch("/api/generate-questions", {
+      const res = await fetch("https://your-render-url.onrender.com/api/generate-questions", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ dilemma }),
@@ -250,7 +250,7 @@ export default function App() {
     setError(null);
 
     try {
-      const res = await fetch("/api/generate-report", {
+      const res = await fetch("https://your-render-url.onrender.com/api/generate-report", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ dilemma, answers: finalAnswers }),
