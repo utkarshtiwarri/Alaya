@@ -293,7 +293,10 @@ Create a `.env` file:
 ```env
 GEMINI_API_KEY=your_api_key_here
 NODE_ENV=development
+VITE_API_BASE_URL=http://localhost:3000
 ```
+
+If your backend is deployed elsewhere, replace the URL above with your backend host.
 
 ### Full Functional Demo
 

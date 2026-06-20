@@ -35,6 +35,11 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL ||
+  (typeof window !== "undefined" ? window.location.origin : "");
+const apiEndpoint = (path: string) => `${API_BASE_URL}${path}`;
+
 const DEMONSTRATION_DILEMMAS = [
   {
     title: "GATE vs Job Placement",
@@ -134,7 +139,7 @@ const localMockReport = (dilemma: string, answers: SurveyAnswers): AlayaReport =
 });
 
 const shouldUseLocalMock = (message: string) => {
-  return /page could not be found|not found|unexpected response format|networkerror|failed to generate|not_found/i.test(message);
+  return /page could not be found|not found|unexpected response format|networkerror|failed to fetch|network request failed|failed to generate|not_found/i.test(message);
 };
 
 export default function App() {
@@ -190,7 +195,7 @@ export default function App() {
     setError(null);
 
     try {
-      const res = await fetch("https://your-render-url.onrender.com/api/generate-questions", {
+      const res = await fetch(apiEndpoint("/api/generate-questions"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ dilemma }),
@@ -250,7 +255,7 @@ export default function App() {
     setError(null);
 
     try {
-      const res = await fetch("https://your-render-url.onrender.com/api/generate-report", {
+      const res = await fetch(apiEndpoint("/api/generate-report"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ dilemma, answers: finalAnswers }),
