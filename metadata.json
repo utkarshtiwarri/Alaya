@@ -1,6 +1,0 @@
-{
-  "name": "Alaya",
-  "description": "Your AI Thinking Partner for Life's Biggest Decisions",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
