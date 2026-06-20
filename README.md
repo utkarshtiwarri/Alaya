@@ -130,7 +130,8 @@ https://youtube.com/your-video
 
 Add your PPT link here
 
-https://drive.google.com/file/d/115_ZLM7jIf2W-4TsolkDDek2t-WZ9trs/view?usp=sharingf
+```text
+https://drive.google.com/file/d/115_ZLM7jIf2W-4TsolkDDek2t-WZ9trs/view?usp=sharing
 ```
 
 ---
@@ -138,19 +139,19 @@ https://drive.google.com/file/d/115_ZLM7jIf2W-4TsolkDDek2t-WZ9trs/view?usp=shari
 # 🖼️ Screenshots
 
 ## Landing Page
-![alt text](image.png)
+![Landing page screenshot](./image.png)
 
 ## Decision Analysis
 
-![alt text](image-1.png)
+![Decision analysis screenshot](./image-1.png)
 
 ## Decision DNA Report
 
-![alt text](image-2.png)
+![Decision DNA report screenshot](./image-2.png)
 
 ## Action Protocol
 
-![alt text](image-3.png)
+![Action protocol screenshot](./image-3.png)
 
 ---
 
