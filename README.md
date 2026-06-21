@@ -18,7 +18,7 @@ Built for the **Build the Second Brain for Real Life** Hackathon.
   <a href="https://alaya-615514915536.asia-southeast1.run.app/">
     <img src="https://img.shields.io/badge/Alaya%20AI-Live%20Demo-6366F1?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Live Demo" />
   </a>
-  <a href="https://youtube.com/your-video">
+  <a href="https://youtu.be/jutbfeSA4-g">
     <img src="https://img.shields.io/badge/Walkthrough%20Video-Watch-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Walkthrough Video" />
   </a>
   <a href="https://drive.google.com/file/d/115_ZLM7jIf2W-4TsolkDDek2t-WZ9trs/view?usp=sharing">
