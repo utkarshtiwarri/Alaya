@@ -141,6 +141,13 @@ const isHardError = (message: string) => {
   return /quota|limit|exceeded|gemini_api_key|api key/i.test(message);
 };
 
+const formatHardErrorMessage = (message: string): string => {
+  if (/quota|limit|exceeded|gemini_api_key|api key/i.test(message)) {
+    return "AI quota temporarily exhausted. Please try again later.";
+  }
+  return message;
+};
+
 const shouldUseLocalMock = (message: string) => {
   return /page could not be found|not found|unexpected response format|networkerror|failed to fetch|network request failed|failed to generate|failed to run|failed during|invalid response|internal server error|service unavailable|bad gateway|gateway timeout|not_found/i.test(message);
 };
@@ -220,7 +227,7 @@ export default function App() {
     } catch (error: unknown) {
       const message = error instanceof Error ? error.message : String(error);
       if (isHardError(message)) {
-        setError(message || "Daily AI limit exceeded or API key configuration error.");
+        setError(formatHardErrorMessage(message));
       } else if (shouldUseLocalMock(message)) {
         const fallbackQuestions = localMockQuestions(dilemma);
         setQuestions(fallbackQuestions);
@@ -283,7 +290,7 @@ export default function App() {
     } catch (error: unknown) {
       const message = error instanceof Error ? error.message : String(error);
       if (isHardError(message)) {
-        setError(message || "Daily AI limit exceeded or API key configuration error.");
+        setError(formatHardErrorMessage(message));
       } else if (shouldUseLocalMock(message)) {
         const fallbackReport = localMockReport(dilemma, finalAnswers);
         setReport(fallbackReport);
