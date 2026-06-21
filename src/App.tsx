@@ -191,6 +191,7 @@ export default function App() {
   // 1. Generate questions
   const fetchQuestions = async () => {
     if (!dilemma.trim()) return;
+    setDemoMode(false);
     setLoadingQuestions(true);
     setError(null);
 
@@ -253,6 +254,7 @@ export default function App() {
 
   // 3. Generate final report
   const generateFinalReport = async (finalAnswers: SurveyAnswers) => {
+    setDemoMode(false);
     setGeneratingReport(true);
     setError(null);
 
