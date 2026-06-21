@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import path from "path";
-import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, Type } from "@google/genai";
 import dotenv from "dotenv";
 
@@ -467,6 +466,7 @@ Validate that your response is valid JSON fitting the requested structure.
 // Serve frontend assets in production or use Vite middleware in dev
 const runViteMiddleware = async () => {
   if (process.env.NODE_ENV !== "production") {
+    const { createServer: createViteServer } = await import("vite");
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",
@@ -485,4 +485,8 @@ const runViteMiddleware = async () => {
   });
 };
 
-runViteMiddleware();
+if (process.env.VERCEL !== "1") {
+  runViteMiddleware();
+}
+
+export default app;
