@@ -1,323 +1,178 @@
 # 🧠 ALAYA
 
-## Your AI Thinking Partner for Life's Biggest Decisions
+### *Confusion → Clarity → Action*
+**Your AI-Powered Decision Intelligence Partner for Life's Biggest Compromises**
 
-Alaya is an AI-powered Decision Intelligence System designed to help people navigate uncertainty, overcome decision paralysis, and take meaningful action.
-
-Instead of telling users what to choose, Alaya helps them understand **why they are stuck**, identify hidden blockers, evaluate tradeoffs, and move from confusion to clarity.
-
----
-
-# 🚀 Problem
-
-People face important decisions every day:
-
-* Higher Studies vs Employment
-* Entrepreneurship vs Stability
-* Career Changes
-* Relocation Decisions
-* Skill Development Paths
-* Personal Growth Opportunities
-
-While information is abundant, clarity is not.
-
-People often struggle with:
-
-* Information overload
-* Conflicting advice
-* Hidden fears and biases
-* Uncertainty about outcomes
-* Analysis paralysis
-
-The problem is not a lack of information.
-
-**The problem is a lack of clarity.**
-
----
-
-# 💡 Solution
-
-Alaya transforms decision-making into a structured reasoning process.
-
-Users describe their dilemma in natural language, and Alaya helps them:
-
-* Understand their priorities
-* Identify hidden concerns
-* Explore tradeoffs
-* Surface potential biases
-* Generate actionable next steps
-
-The goal is not to replace human judgment.
-
-The goal is to strengthen it.
-
----
-
-# ✨ Core Features
-
-## Decision DNA Analysis
-
-Analyze:
-
-* Core Values
-* Priorities
-* Constraints
-* Decision Style
-
----
-
-## Tradeoff Mapping
-
-Compare options across:
-
-* Risk
-* Growth
-* Stability
-* Learning
-* Opportunity Cost
-
----
-
-## Hidden Blocker Detection
-
-Surface possible blockers such as:
-
-* Fear of Failure
-* Analysis Paralysis
-* Social Pressure
-* Perfectionism
-* Fear of Missing Out
-
----
-
-## Action Protocol Generator
-
-Generate structured plans such as:
-
-* 7-Day Action Plan
-* 14-Day Validation Plan
-* 30-Day Exploration Plan
-
----
-
-## Human-in-the-Loop Design
-
-Alaya provides insights and recommendations.
-
-Final decisions always remain with the user.
-
----
-
-# 🎥 Demo
-
-## Live Demo
-
-Add your deployment link here
-
-```text
-https://alaya-nine.vercel.app/
-```
-
-## Demo Video
-
-Add your YouTube video link here
-
-```text
-https://youtube.com/your-video
-```
-
-## Presentation
-
-Add your PPT link here
-
-```text
-https://drive.google.com/file/d/115_ZLM7jIf2W-4TsolkDDek2t-WZ9trs/view?usp=sharing
-```
-
----
-
-# 🖼️ Screenshots
-
-## Landing Page
-![Landing page screenshot](./image.png)
-
-## Decision Analysis
-
-![Decision analysis screenshot](./image-1.png)
-
-## Decision DNA Report
-
-![Decision DNA report screenshot](./image-2.png)
-
-## Action Protocol
-
-![Action protocol screenshot](./image-3.png)
-
----
-
-# 🧭 How to Use
-
-### Step 1
-
-Open Alaya in your browser.
-
-### Step 2
-
-Describe your dilemma.
-
-Example:
-
-> I am confused between pursuing higher studies, accepting a job offer, or starting my own business.
-
-### Step 3
-
-Answer the AI-generated follow-up questions.
-
-### Step 4
-
-Review your Decision DNA Report.
-
-### Step 5
-
-Understand your values, tradeoffs, and hidden blockers.
-
-### Step 6
-
-Follow the recommended action protocol.
-
-### Step 7
-
-Make a more informed and confident decision.
-
----
-
-# 🏗️ Architecture
-
-```text
-User Dilemma
-      ↓
-Natural Language Processing
-      ↓
-Value Extraction
-      ↓
-Tradeoff Analysis
-      ↓
-Bias Detection
-      ↓
-Decision Intelligence Engine
-      ↓
-Decision Report
-      ↓
-Action Protocol
-```
-
----
-
-# 🛡️ Responsible AI
-
-Responsible AI is a core design principle of Alaya.
-
-## Potential Risk
-
-Users may over-rely on AI-generated insights.
-
-## Mitigation Strategies
-
-* Confidence Indicators
-* Transparent Reasoning
-* Multiple Perspectives
-* Alternative Interpretations
-* Human-in-the-Loop Oversight
-
-## Important
-
-Alaya does not make decisions on behalf of users.
-
-The final decision always remains under human control.
-
----
-
-# 🛠️ Tech Stack
-
-## Frontend
-
-* React
-* TypeScript
-
-## Backend
-
-* Express.js
-* Node.js
-
-## AI
-
-* Google Gemini API
-
----
-
-# 📂 Project Structure
-
-```text
-alaya/
-├── src/
-│   ├── components/
-│   ├── App.tsx
-│   └── ...
-├── server.ts
-├── package.json
-└── README.md
-```
-
----
-
-# ⚙️ Local Development
-
-The app is live, so users can access the demo directly from the deployment link above.
-
-# 🔍 Example Use Cases
-
-### Education
-
-* Choosing a degree path
-* Studying abroad
-* Exam preparation decisions
-
-### Career
-
-* Job switching
-* Offer evaluation
-* Career planning
-
-### Entrepreneurship
-
-* Startup validation
-* Business opportunity analysis
-* Growth decisions
-
-### Personal Life
-
-* Relocation choices
-* Goal prioritization
-* Long-term planning
-
----
-
-# 🌟 Vision
-
-We envision Alaya becoming a lifelong Decision Intelligence Companion that helps people make better decisions, navigate uncertainty, and develop stronger decision-making skills over time.
-
----
-
-# 📌 Tagline
-
-### Confusion → Clarity → Action
-
-### Alaya — Your AI Thinking Partner for Life's Biggest Decisions.
-
----
-
-# 👨‍💻 Team
-
-**Steel Brains**
+Alaya is a cognitive-behavioral Decision Intelligence System designed to help individuals navigate uncertainty, overcome analysis paralysis, and formulate risk-free validation experiments. Instead of telling users what to choose, Alaya maps their subconscious priorities, uncovers hidden cognitive biases, simulates future scenarios, and helps them move confidently from confusion to clear action.
 
 Built for the **Build the Second Brain for Real Life** Hackathon.
+
+---
+
+## 🚀 Live Demo & Presentation
+
+> [!IMPORTANT]
+> **Before Hackathon Submission:** Remember to replace the placeholder links below with your final links!
+
+* 🌐 **Live Application:** [alaya-nine.vercel.app](https://alaya-nine.vercel.app/)
+* 🎥 **Walkthrough Video:** [YouTube Video Link](https://youtube.com/your-video) *(Replace with your actual link)*
+* 📊 **Pitch Deck / Presentation:** [Google Drive Pitch Presentation](https://drive.google.com/file/d/115_ZLM7jIf2W-4TsolkDDek2t-WZ9trs/view?usp=sharing)
+
+---
+
+## 🛠️ Tech Stack & Integrations
+
+Alaya is built using a modern, lightweight, and high-performance serverless stack:
+
+* **Frontend:** ![React](https://img.shields.io/badge/React-19.0-blue?logo=react) ![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue?logo=typescript) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38bdf8?logo=tailwind-css) ![Vite](https://img.shields.io/badge/Vite-6.2-646cff?logo=vite)
+* **Backend:** ![Node.js](https://img.shields.io/badge/Node.js-22.0-6ebd45?logo=node.js) ![Express](https://img.shields.io/badge/Express-4.21-000000?logo=express) ![tsx](https://img.shields.io/badge/tsx-4.21-ff5a1a)
+* **AI Engine:** ![Google Gemini API](https://img.shields.io/badge/Google_Gemini-3.5_Flash-f25f22?logo=google-gemini)
+* **Deployment:** ![Vercel Serverless](https://img.shields.io/badge/Vercel_Serverless-Functions-000000?logo=vercel)
+
+---
+
+## ✨ Key Features
+
+### 🧬 Decision DNA Analysis
+Extracts core values, priorities, constraints, and custom cognitive styles (e.g. *Analytical Dreamer*) from natural language descriptions of life decisions.
+
+### ⚖️ Dynamic Tradeoff Mapping
+Compares options side-by-side using numerical metrics (Risk, Growth, Income, Learning, Flexibility) accompanied by key Pros and Cons.
+
+### 🔍 Cognitive Bias Detection
+Identifies underlying blockers (e.g. Sunk Cost Fallacy, Loss Aversion, Perfectionism, FOMO) that keep users stuck in analysis paralysis.
+
+### 📅 Action Protocol Playbook
+Generates a structured, risk-free validation roadmap consisting of:
+* **7-Day Plan:** Information gathering and initial conversations.
+* **14-Day Plan:** Active trial / validation experiment (including target metrics and concrete actions).
+* **30-Day Plan:** Threshold limits and commitment checks.
+
+---
+
+## 🏗️ System Architecture
+
+Alaya leverages a serverless architecture where the static React frontend is served via Vercel's global CDN, and the backend routes API requests dynamically to Vercel Serverless Functions.
+
+```mermaid
+graph TD
+    User([User Dilemma]) --> |Input Text| FE[React Frontend]
+    FE --> |API POST Request| BE[Express Serverless Backend]
+    BE --> |Schema-Enforced Prompt| Gemini[Google Gemini 3.5 Flash]
+    Gemini --> |Structured JSON Response| BE
+    BE --> |Refined DNA Report & Playbook| FE
+    FE --> |Interactive UI / Action Tracker| User
+```
+
+---
+
+## 🤖 Google Gemini API Engine
+
+Alaya is powered by the **Google Gemini 3.5 Flash** model using the new `@google/genai` SDK. To guarantee high reliability and type-safety in the frontend, the serverless backend enforces strict **JSON Schemas** directly at the API gateway level:
+
+```typescript
+// Enforcing a strict schema constraint for the Gemini API call in server.ts
+const response = await ai.models.generateContent({
+  model: "gemini-3.5-flash",
+  contents: prompt,
+  config: {
+    responseMimeType: "application/json",
+    responseSchema: {
+      type: Type.OBJECT,
+      properties: {
+        coreValues: {
+          type: Type.ARRAY,
+          items: {
+            type: Type.OBJECT,
+            properties: {
+              value: { type: Type.STRING },
+              explanation: { type: Type.STRING },
+              importance: { type: Type.INTEGER }
+            },
+            required: ["value", "explanation", "importance"]
+          }
+        },
+        decisionStyle: {
+          type: Type.OBJECT,
+          properties: {
+            style: { type: Type.STRING },
+            description: { type: Type.STRING }
+          },
+          required: ["style", "description"]
+        },
+        // Additional properties for hiddenBlockers, tradeoff comparisons, scenarios, and plans
+      },
+      required: ["coreValues", "decisionStyle", "hiddenBlockers", "optionsCompared", "biasAnalysis", "futureScenarios", "suggestedActionPath", "confidenceLevel"]
+    }
+  }
+});
+```
+
+---
+
+## 🛡️ Responsible AI Principles
+
+Alaya adheres strictly to **Responsible AI** development practices:
+* **Human-in-the-Loop:** Alaya acts as an analyzer and cognitive guide. It *never* makes choices for the user or recommends a specific option.
+* **Confidence Indicators:** Calculates a priority confidence index based on user inputs.
+* **Explicit Disclaimers:** Provides permanent access to an interactive disclosure modal outlining the limits of AI-generated advice.
+
+---
+
+## ⚙️ Local Development Setup
+
+Follow these instructions to run the application locally on your computer:
+
+### 1. Prerequisites
+Ensure you have [Node.js](https://nodejs.org/) installed (v18.0.0 or higher).
+
+### 2. Clone and Install Dependencies
+```bash
+git clone https://github.com/utkarshtiwarri/Alaya.git
+cd Alaya
+npm install
+```
+
+### 3. Configure Environment Variables
+Copy the env template file to `.env`:
+```bash
+# On Windows PowerShell:
+copy .env.example .env
+
+# On macOS/Linux:
+cp .env.example .env
+```
+Open `.env` in a text editor:
+* **To run with AI (Live Mode):** Add your Google Gemini API key:
+  ```env
+  GEMINI_API_KEY="AIzaSyYourGeminiApiKeyHere"
+  ```
+* **To run without AI (Mock Mode):** If you do not have an API key and want to test the UI flow immediately, add:
+  ```env
+  MOCK_MODE=true
+  ```
+
+### 4. Run the Development Server
+```bash
+npm run dev
+```
+Open your browser and navigate to **`http://localhost:3000`**. The local server will hot-reload automatically as you edit the code.
+
+---
+
+## 📂 Project Structure
+
+```text
+Alaya/
+├── api/                # Vercel serverless function entrypoint
+│   └── index.ts        
+├── src/                # Frontend React code
+│   ├── components/     # UI components (Values DNA, Scenario Simulator, etc.)
+│   ├── types.ts        # TypeScript declarations
+│   ├── App.tsx         # Main application coordinator
+│   └── index.css       # Core styling & Tailwind imports
+├── server.ts           # Express backend endpoints & Vite dev server configuration
+├── vercel.json         # Vercel routing rules
+├── package.json        
+└── README.md           
+```
