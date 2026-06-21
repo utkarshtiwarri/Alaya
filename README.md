@@ -14,7 +14,8 @@ Built for the **Build the Second Brain for Real Life** Hackathon.
 > [!IMPORTANT]
 > **Before Hackathon Submission:** Remember to replace the placeholder links below with your final links!
 
-* 🌐 **Live Application:** [alaya-nine.vercel.app](https://alaya-nine.vercel.app/)
+* 🌐 **Live Application:** [alaya-nine.vercel.app](https://alaya-nine.vercel.app/)  
+  *(Note: The application is fully functional and deployed live. Due to Google Gemini free-tier API rate limits, the live demo may occasionally become temporarily unavailable after heavy usage. A complete walkthrough video is included to demonstrate the full user experience and all features.)*
 * 🎥 **Walkthrough Video:** [YouTube Video Link](https://youtube.com/your-video) *(Replace with your actual link)*
 * 📊 **Pitch Deck / Presentation:** [Google Drive Pitch Presentation](https://drive.google.com/file/d/115_ZLM7jIf2W-4TsolkDDek2t-WZ9trs/view?usp=sharing)
 
