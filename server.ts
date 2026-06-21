@@ -199,6 +199,11 @@ Respond strictly with a JSON array matches this schema:
     return res.json({ questions });
   } catch (err: any) {
     console.error("Error generating questions:", err);
+    if (err.status === 429) {
+      return res.status(429).json({
+        error: "Daily AI quota reached. Please try again later."
+      });
+    }
     return res.status(500).json({
       error: err.message || "Failed to generate follow-up questions"
     });
@@ -448,6 +453,11 @@ Validate that your response is valid JSON fitting the requested structure.
     return res.json({ report });
   } catch (err: any) {
     console.error("Error generating report:", err);
+    if (err.status === 429) {
+      return res.status(429).json({
+        error: "Daily AI quota reached. Please try again later."
+      });
+    }
     return res.status(500).json({
       error: err.message || "Failed to generate decision report"
     });

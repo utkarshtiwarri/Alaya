@@ -123,26 +123,6 @@ https://alaya-nine.vercel.app
   - Decision DNA generation
   - Action protocol generation
 
-The application includes a fallback demo mode for evaluation when external AI services are unavailable.
-
-## Demo Video
-
-Add your YouTube video link here
-
-Demo video recorded from localhost, showing the complete Gemini-powered workflow and the real AI flow.
-
-```text
-https://youtube.com/your-video
-```
-
-## Presentation
-
-Add your PPT link here
-
-```text
-https://drive.google.com/file/d/115_ZLM7jIf2W-4TsolkDDek2t-WZ9trs/view?usp=sharing
-```
-
 ---
 
 # 🖼️ Screenshots
@@ -279,67 +259,11 @@ alaya/
 
 ---
 
-# ⚙️ Run Locally
+# ⚙️ Local Development
 
-## Prerequisites
+The app is live, so users can access the demo directly from the deployment link above.
 
-* Node.js (LTS)
-
-### Install Dependencies
-
-```bash
-npm install
-```
-
-### Configure Environment Variables
-
-Create a `.env` file:
-
-```env
-GEMINI_API_KEY=your_api_key_here
-NODE_ENV=development
-VITE_API_BASE_URL=http://localhost:3000
-```
-
-If your backend is deployed elsewhere, replace the URL above with your backend host.
-
-### Full Functional Demo
-
-To run Alaya fully without a live Gemini key, enable mock/demo mode:
-
-```env
-MOCK_MODE=true
-```
-
-This will make the app return deterministic sample questions and reports so the UI works end-to-end.
-
-### Start Development Server
-
-```bash
-npm run dev
-```
-
-If PowerShell is blocked by execution policy, use Windows CMD instead:
-
-```cmd
-cmd.exe /c "npm install && npm run dev"
-```
-
-> Note: PowerShell may refuse execution for scripts if the system policy is restricted. Using `cmd.exe` avoids that restriction for local npm commands.
-
-Open:
-
-```text
-http://localhost:3000
-```
-
-### What to expect
-
-1. A clean landing page with the Alaya decision prompt.
-2. Enter your dilemma and click to start the thinking session.
-3. Answer the AI-generated follow-up questions one by one.
-4. Receive a Decision DNA report, bias analysis, tradeoff map, and action protocol.
-5. Export your report or restart the session at any time.
+If the backend API is unavailable, use the Mock / Demo Mode section below for a local fallback.
 
 ---
 

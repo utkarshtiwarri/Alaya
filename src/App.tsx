@@ -138,7 +138,7 @@ const localMockReport = (dilemma: string, answers: SurveyAnswers): AlayaReport =
 });
 
 const shouldUseLocalMock = (message: string) => {
-  return /page could not be found|not found|unexpected response format|networkerror|failed to fetch|network request failed|failed to generate|failed to run|failed during|invalid response|internal server error|service unavailable|bad gateway|gateway timeout|api.*error|not_found/i.test(message);
+  return /page could not be found|not found|unexpected response format|networkerror|failed to fetch|network request failed|failed to generate|failed to run|failed during|invalid response|internal server error|service unavailable|bad gateway|gateway timeout|quota|api.*error|not_found/i.test(message);
 };
 
 export default function App() {
