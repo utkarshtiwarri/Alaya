@@ -112,24 +112,27 @@ Final decisions always remain with the user.
 
 ## Live Demo
 
-https://alaya-nine.vercel.app
+Add your deployment link here
 
-## AI Model
-
-- Google Gemini API powers:
-  - Follow-up questioning
-  - Value extraction
-  - Bias detection
-  - Decision DNA generation
-  - Action protocol generation
+```text
+https://alaya-nine.vercel.app/
+```
 
 ## Demo Video
 
+Add your YouTube video link here
+
+```text
 https://youtube.com/your-video
+```
 
 ## Presentation
 
+Add your PPT link here
+
+```text
 https://drive.google.com/file/d/115_ZLM7jIf2W-4TsolkDDek2t-WZ9trs/view?usp=sharing
+```
 
 ---
 
