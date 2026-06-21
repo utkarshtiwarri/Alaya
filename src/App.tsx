@@ -38,7 +38,6 @@ import { motion, AnimatePresence } from "motion/react";
 const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL ||
   (typeof window !== "undefined" ? window.location.origin : "");
-const apiEndpoint = (path: string) => `${API_BASE_URL}${path}`;
 
 const DEMONSTRATION_DILEMMAS = [
   {
@@ -195,7 +194,7 @@ export default function App() {
     setError(null);
 
     try {
-      const res = await fetch(apiEndpoint("/api/generate-questions"), {
+      const res = await fetch("https://alaya-236j.onrender.com/api/generate-questions", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ dilemma }),
@@ -255,7 +254,7 @@ export default function App() {
     setError(null);
 
     try {
-      const res = await fetch(apiEndpoint("/api/generate-report"), {
+      const res = await fetch("https://alaya-236j.onrender.com/api/generate-report", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ dilemma, answers: finalAnswers }),
