@@ -14,10 +14,20 @@ Built for the **Build the Second Brain for Real Life** Hackathon.
 > [!IMPORTANT]
 > **Before Hackathon Submission:** Remember to replace the placeholder links below with your final links!
 
-* 🌐 **Live Application:** [Alaya AI](https://alaya-615514915536.asia-southeast1.run.app/)  
-  *(Note: The application is fully functional and deployed live. Due to Google Gemini free-tier API rate limits, the live demo may occasionally become temporarily unavailable after heavy usage. A complete walkthrough video is included to demonstrate the full user experience and all features.)*
-* 🎥 **Walkthrough Video:** [YouTube Video Link](https://youtube.com/your-video) *(Replace with your actual link)*
-* 📊 **Pitch Deck / Presentation:** [Google Drive Pitch Presentation](https://drive.google.com/file/d/115_ZLM7jIf2W-4TsolkDDek2t-WZ9trs/view?usp=sharing)
+<div align="center">
+  <a href="https://alaya-615514915536.asia-southeast1.run.app/">
+    <img src="https://img.shields.io/badge/Alaya%20AI-Live%20Demo-6366F1?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Live Demo" />
+  </a>
+  <a href="https://youtube.com/your-video">
+    <img src="https://img.shields.io/badge/Walkthrough%20Video-Watch-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Walkthrough Video" />
+  </a>
+  <a href="https://drive.google.com/file/d/115_ZLM7jIf2W-4TsolkDDek2t-WZ9trs/view?usp=sharing">
+    <img src="https://img.shields.io/badge/Pitch%20Presentation-View-4285F4?style=for-the-badge&logo=google-slides&logoColor=white" alt="Pitch Presentation" />
+  </a>
+</div>
+
+> [!NOTE]
+> The live application is fully functional and deployed live. Due to Google Gemini free-tier API rate limits, the live demo may occasionally become temporarily unavailable after heavy usage. A complete walkthrough video is included to demonstrate the full user experience and all features.
 
 ---
 
