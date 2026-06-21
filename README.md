@@ -116,13 +116,12 @@ https://alaya-nine.vercel.app
 
 ## AI Model
 
-Google Gemini API powers:
-
-- Follow-up questioning
-- Value extraction
-- Bias detection
-- Decision DNA generation
-- Action protocol generation
+- Google Gemini API powers:
+  - Follow-up questioning
+  - Value extraction
+  - Bias detection
+  - Decision DNA generation
+  - Action protocol generation
 
 ## Demo Video
 
