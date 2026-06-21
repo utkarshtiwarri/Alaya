@@ -123,6 +123,14 @@ https://alaya-nine.vercel.app
   - Decision DNA generation
   - Action protocol generation
 
+## Demo Video
+
+https://youtube.com/your-video
+
+## Presentation
+
+https://drive.google.com/file/d/115_ZLM7jIf2W-4TsolkDDek2t-WZ9trs/view?usp=sharing
+
 ---
 
 # 🖼️ Screenshots
@@ -262,30 +270,6 @@ alaya/
 # ⚙️ Local Development
 
 The app is live, so users can access the demo directly from the deployment link above.
-
-If the backend API is unavailable, use the Mock / Demo Mode section below for a local fallback.
-
----
-
-# 🧪 Mock / Demo Mode
-
-Run Alaya without a live AI key.
-
-Create or update your `.env` file:
-
-```env
-MOCK_MODE=true
-```
-
-Then start:
-
-```bash
-npm run dev
-```
-
-When Mock Mode is enabled, Alaya returns deterministic example questions and reports, making it perfect for demos and testing.
-
----
 
 # 🔍 Example Use Cases
 
