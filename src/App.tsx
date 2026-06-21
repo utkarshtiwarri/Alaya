@@ -156,7 +156,6 @@ export default function App() {
   const [generatingReport, setGeneratingReport] = useState(false);
   const [report, setReport] = useState<AlayaReport | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [demoMode, setDemoMode] = useState(false);
 
   // Load report from localStorage on mount (persistence)
   useEffect(() => {
@@ -191,7 +190,6 @@ export default function App() {
   // 1. Generate questions
   const fetchQuestions = async () => {
     if (!dilemma.trim()) return;
-    setDemoMode(false);
     setLoadingQuestions(true);
     setError(null);
 
@@ -211,7 +209,6 @@ export default function App() {
         throw new Error("Invalid response from the server while generating questions.");
       }
 
-      setDemoMode(false);
       setQuestions(data.questions);
       setCurrentQuestionIdx(0);
       setAnswers({});
@@ -220,7 +217,6 @@ export default function App() {
       const message = error instanceof Error ? error.message : String(error);
       if (shouldUseLocalMock(message)) {
         const fallbackQuestions = localMockQuestions(dilemma);
-        setDemoMode(true);
         setQuestions(fallbackQuestions);
         setCurrentQuestionIdx(0);
         setAnswers({});
@@ -254,7 +250,7 @@ export default function App() {
 
   // 3. Generate final report
   const generateFinalReport = async (finalAnswers: SurveyAnswers) => {
-    setDemoMode(false);
+    // reset response state if making a new live request
     setGeneratingReport(true);
     setError(null);
 
@@ -274,7 +270,6 @@ export default function App() {
         throw new Error("Invalid response received from the engine.");
       }
 
-      setDemoMode(false);
       setReport(data.report);
       localStorage.setItem("alaya_current_report", JSON.stringify(data.report));
       localStorage.setItem("alaya_current_dilemma", dilemma);
@@ -282,7 +277,6 @@ export default function App() {
     } catch (error: unknown) {
       const message = error instanceof Error ? error.message : String(error);
       if (shouldUseLocalMock(message)) {
-        setDemoMode(true);
         const fallbackReport = localMockReport(dilemma, finalAnswers);
         setReport(fallbackReport);
         localStorage.setItem("alaya_current_report", JSON.stringify(fallbackReport));
@@ -305,7 +299,6 @@ export default function App() {
     setDilemma("");
     setAnswers({});
     setQuestions([]);
-    setDemoMode(false);
     setPage("landing");
   };
 
@@ -390,12 +383,6 @@ Target metrics: ${report.suggestedActionPath.validationExperiment.keyMetrics.joi
           </div>
 
           <div className="flex items-center gap-3">
-            {demoMode && (
-              <div className="rounded-full border border-rose-400/30 bg-rose-500/10 px-3 py-1 text-[10px] font-mono uppercase tracking-[0.25em] text-rose-200">
-                Demo Mode Active
-              </div>
-            )}
-
             <nav className="flex items-center gap-5">
               <button
                 onClick={() => setPage("landing")}
