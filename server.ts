@@ -25,7 +25,7 @@ let aiClient: GoogleGenAI | null = null;
 
 // Mock/demo mode: when true, endpoints return static example responses so you can demo
 // the app without a live AI key. Set `MOCK_MODE=true` in your `.env` to enable.
-const MOCK_MODE = process.env.MOCK_MODE === "true" || !process.env.GEMINI_API_KEY;
+const MOCK_MODE = process.env.MOCK_MODE === "true";
 
 function generateMockQuestions(dilemma: string) {
   return [
