@@ -429,6 +429,7 @@ Target metrics: ${report.suggestedActionPath.validationExperiment.keyMetrics.joi
             </button>
           </nav>
         </div>
+      </div>
       </header>
 
       {/* Main Container */}
