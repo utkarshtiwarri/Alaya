@@ -137,8 +137,12 @@ const localMockReport = (dilemma: string, answers: SurveyAnswers): AlayaReport =
   confidenceLevel: 72,
 });
 
+const isHardError = (message: string) => {
+  return /quota|limit|exceeded|gemini_api_key|api key/i.test(message);
+};
+
 const shouldUseLocalMock = (message: string) => {
-  return /page could not be found|not found|unexpected response format|networkerror|failed to fetch|network request failed|failed to generate|failed to run|failed during|invalid response|internal server error|service unavailable|bad gateway|gateway timeout|quota|api.*error|not_found/i.test(message);
+  return /page could not be found|not found|unexpected response format|networkerror|failed to fetch|network request failed|failed to generate|failed to run|failed during|invalid response|internal server error|service unavailable|bad gateway|gateway timeout|not_found/i.test(message);
 };
 
 export default function App() {
@@ -215,7 +219,9 @@ export default function App() {
       setCustomAnswer("");
     } catch (error: unknown) {
       const message = error instanceof Error ? error.message : String(error);
-      if (shouldUseLocalMock(message)) {
+      if (isHardError(message)) {
+        setError(message || "Daily AI limit exceeded or API key configuration error.");
+      } else if (shouldUseLocalMock(message)) {
         const fallbackQuestions = localMockQuestions(dilemma);
         setQuestions(fallbackQuestions);
         setCurrentQuestionIdx(0);
@@ -276,7 +282,9 @@ export default function App() {
       setPage("results");
     } catch (error: unknown) {
       const message = error instanceof Error ? error.message : String(error);
-      if (shouldUseLocalMock(message)) {
+      if (isHardError(message)) {
+        setError(message || "Daily AI limit exceeded or API key configuration error.");
+      } else if (shouldUseLocalMock(message)) {
         const fallbackReport = localMockReport(dilemma, finalAnswers);
         setReport(fallbackReport);
         localStorage.setItem("alaya_current_report", JSON.stringify(fallbackReport));
